@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "250823588967",
+    "firebase_url": "https://fpractice-a60ce.firebaseio.com",
+    "project_id": "fpractice-a60ce",
+    "storage_bucket": "fpractice-a60ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250823588967:android:ac095518c136d825d4e8c2",
+        "android_client_info": {
+          "package_name": "com.example.fpdfupload"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250823588967-u3o72i9oeh9lfu48dmicbljtkpocf9et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMh3hFtYbRNaS8n4D4lWxLCD4fwur5Hss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250823588967-u3o72i9oeh9lfu48dmicbljtkpocf9et.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
