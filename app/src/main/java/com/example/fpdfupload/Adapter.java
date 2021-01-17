@@ -42,20 +42,20 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             public void onClick(View v) {
                 String Name = currentList.getName();
                 String Url = currentList.getUrl();
-//                Intent intent = new Intent(context,ViewPdf.class);
-//                intent.putExtra("name",Name);
-//                intent.putExtra("url",Url);
-//                context.startActivity(intent);
+                Intent intent = new Intent(context,ViewPdf.class);
+                intent.putExtra("name",Name);
+                intent.putExtra("url",Url);
+                context.startActivity(intent);
 
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setDataAndType(Uri.parse(Url), "application/pdf");
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                Intent newIntent = Intent.createChooser(intent, "Open File");
-                try {
-                   context.startActivity(newIntent);
-                } catch (ActivityNotFoundException e) {
-                    // Instruct the user to install a PDF reader here, or something
-                }
+//                Intent intent = new Intent(Intent.ACTION_VIEW);
+//                intent.setDataAndType(Uri.parse(Url), "application/pdf");
+//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                Intent newIntent = Intent.createChooser(intent, "Open File");
+//                try {
+//                   context.startActivity(newIntent);
+//                } catch (ActivityNotFoundException e) {
+//                    // Instruct the user to install a PDF reader here, or something
+//                }
             }
         });
     }

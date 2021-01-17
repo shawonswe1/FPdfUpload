@@ -5,17 +5,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.github.barteksc.pdfviewer.PDFView;
 
 import java.net.URLEncoder;
 
 public class ViewPdf extends AppCompatActivity {
 
     WebView pdfView;
-
+//    PDFView pdfView;
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,7 @@ public class ViewPdf extends AppCompatActivity {
         pdfView.getSettings().setJavaScriptEnabled(true);
         String name = getIntent().getStringExtra("name");
         String fileUrl = getIntent().getStringExtra("url");
+        Uri path = Uri.parse(fileUrl);
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setTitle(name);
@@ -56,5 +60,11 @@ public class ViewPdf extends AppCompatActivity {
         }
         Log.e("Url: ",url);
         pdfView.loadUrl("http://docs.google.com/gview?embedded=true&url="+url);
+
+//        pdfView= (PDFView)findViewById(R.id.pdfView);
+//        pdfView.fromUri(path)
+//                .enableSwipe(true)
+//                .enableAnnotationRendering(true)
+//                .load();
     }
 }
